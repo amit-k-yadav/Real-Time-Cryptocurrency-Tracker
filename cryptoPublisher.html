@@ -41,6 +41,31 @@
 					      }
 					    }
 					  });
+
+
+		        //Crypto Prices in INR
+		        pubnub.publish({
+					    channel: 'bitcoin-feed-inr',
+					    message: {
+					      eon: {
+					        'BitCoin': response.BTC.INR.toFixed(2),
+					      }
+					    }
+					  });
+
+		        pubnub.publish({
+					    channel: 'other-crypto-feed-inr',
+					    message: {
+					      eon: {
+					        'Ether': response.ETH.INR.toFixed(2),
+					        'LiteCoin': response.LTC.INR.toFixed(2),
+					        'Monero' : response.XMR.INR.toFixed(2),
+					        'Melon' : response.MLN.INR.toFixed(2),
+					        'DASH' : response.DASH.INR.toFixed(2)
+
+					      }
+					    }
+					  });
 		    }
 		}
 
