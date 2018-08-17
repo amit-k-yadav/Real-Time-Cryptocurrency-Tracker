@@ -49,7 +49,7 @@
 				xhr.open('GET', 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,XMR,MLN,DASH&tsyms=USD,INR', true)
 				xhr.send();
 				xhr.onreadystatechange = processRequest;
-			}, 100)
+			}, 1000)
 		};
 		mainApp();
 	</script>
