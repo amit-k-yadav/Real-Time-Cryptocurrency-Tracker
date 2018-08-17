@@ -27,6 +27,16 @@
 					      }
 					    }
 					  });
+
+		        pubnub.publish({
+					    channel: 'other-crypto-feed',
+					    message: {
+					      eon: {
+					        'Ether': response.ETH.USD.toFixed(2),
+					        'LiteCoin': response.LTC.USD.toFixed(2)
+					      }
+					    }
+					  });
 		    }
 		}
 

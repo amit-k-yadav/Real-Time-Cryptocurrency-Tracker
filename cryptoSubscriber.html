@@ -41,6 +41,20 @@
 		  }
 		});
 
+		// Create the Ether Chart for BitCoin and bind its div
+		eon.chart({
+		  channels: ['other-crypto-feed'],
+		  history: true,
+		  flow: true,
+		  limit: pointLimit,
+		  pubnub: pubnub,
+		  generate: {
+		    bindto: '#etherChart',
+		    data: eonData,
+		    axis: eonAxis
+			}
+		});
+
 	</script>
 </body>
 </html>
