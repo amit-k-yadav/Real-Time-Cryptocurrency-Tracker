@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="https://pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
 		<link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/1.0.0/eon.css"/>
 </head>
-<body align="center">
+<body align="center" style="background-color: #efefef">
 	<h1>You are seeing Cryptocurrency values to USD</h1>
 	Click <a href="cryptoSubscriberINR.html">here</a> to see Crypto values in <b>INR</b>
 	<div id="bitcoinChart"></div>
@@ -14,9 +14,8 @@
 
 	<script type="text/javascript">
 
-		// You will only be subscribing to a channel, so no need for a publish key
 		var pubnub = new PubNub({
-		    subscribeKey: 'sub-c-5d32a802-a149-11e8-b082-12b6fee23487' // replace with your own sub-key
+		    subscribeKey: 'sub-c-5d32a802-a149-11e8-b082-12b6fee23487' 
 		  });
 
 		// EON Charts configuration
@@ -41,7 +40,7 @@
 		  }
 		});
 
-		// Create the Ether Chart for BitCoin and bind its div
+		// Create the EON chart for other cyptos and bind its div
 		eon.chart({
 		  channels: ['other-crypto-feed'],
 		  history: true,
